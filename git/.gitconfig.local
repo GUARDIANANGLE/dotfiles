@@ -1,6 +1,6 @@
 [meta]
 	isLocalConfig = true
 [user]
-	signingkey = /Users/ed/.ssh/id_signing.pub
+	signingkey = ~/.ssh/id_signing.pub
 [gpg "ssh"]
-	allowedSignersFile = /Users/ed/.ssh/allowed_signers
+	allowedSignersFile = ~/.ssh/allowed_signers
