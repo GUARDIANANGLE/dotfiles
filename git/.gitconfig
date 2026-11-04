@@ -9,7 +9,7 @@
 [include]
 	path = ~/.gitconfig.local
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 [user]
   name  = GUARDIANGLE
   email = donotuchmehere@gmail.com
