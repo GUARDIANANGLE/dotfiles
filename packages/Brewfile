@@ -23,7 +23,7 @@ tap 'buo/cask-upgrade'	# Upgrade casks
 tap 'eddieantonio/eddieantonio' # Eddie Antonio's Homebrew Tap
 tap 'github/gh'	# Interact with GitHub PRs, issues, repos
 tap 'kyoh86/tap' 								# for 'sd' - RegEx find and replace (better sed) - Rust
-tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS
+#tap 'over-sh/bun' 							# All-in-one toolkit for JS/TS (tap retired; bun is now in homebrew-core)
 tap 'sass/sass'	# Sass
 tap 'teamookla/speedtest'	# Command line speed test utility
 tap 'julien-cpsn/atac'          # A simple API client (postman like) in your terminal
@@ -98,7 +98,7 @@ brew 'pango'                # Text layout and rendering
 brew 'exiftool'
 # brew 'glow'                 # Render Markdown on the CLI
 brew 'vhs'                  # Write terminal GIFs as code
-brew 'tamnd/tap/kage'
+cask 'tamnd/tap/kage'
 
 # CLI Monitoring and Performance Apps
 brew 'btop'         # better top
@@ -148,7 +148,7 @@ brew 'rbenv'                  # Ruby version manager
 brew 'redis'                  # Redis database engine
 brew 'ruby-build'             # Ruby build plugin for rbenv
 brew 'richgo'                 # Go test output formatter
-brew 'rustup-init'            # Rust version manager
+brew 'rustup'                  # Rust version manager (renamed from rustup-init)
 brew 'sass/sass/migrator'     # Sass migration tool
 brew 'sass/sass/sass'         # Sass CSS pre-processor
 brew 'sqlite'                 # SQLite database engine
@@ -188,7 +188,7 @@ brew 'nmap'               # Port scanning
 brew 'dnsmasq'            # DNS server used with Larvel Valet in ~/Sites
 brew 'nginx'              # Web server used with Larvel Valet in ~/Sites
 brew 'hyperfine'          # Benchmark command-line programs
-cask 'wireshark'          # Network protocol analyzer
+cask 'wireshark-app'      # Network protocol analyzer (renamed from wireshark)
 brew 'termshark'
 brew 'socat'
 brew 'boring'            # ssh tunel
@@ -214,7 +214,7 @@ cask 'inkscape'
 cask 'gimp'
 
 # 3D Modeling & CAD
-cask 'openscad'             # 3D CAD Modeller
+cask 'openscad@snapshot'     # 3D CAD Modeller (openscad cask disabled 2026-09-01, use snapshot)
 cask 'freecad'              # 3D CAD - open source
 
 # 3D Slicers
@@ -233,7 +233,7 @@ cask 'obs'                  # Screen recorder
 cask 'google-drive'         # Cloud storage
 cask 'tailscale-app'
 cask 'tigervnc'
-brew 'orbstack'             # Docker image viewer
+cask 'orbstack'             # Docker image viewer (renamed from formula to cask)
 cask 'fluidvoice'           # STT
 
 # Utility Applications
@@ -254,8 +254,8 @@ cask 'thaw'
 
 # Keyboard+Mouse Hacks
 brew 'qmk/qmk/qmk'                 # Keyboard firmware
-cask 'via'                         # Keyboard configuration desktop client
-cask 'vial'                        # Keyboard configuration desktop client
+#cask 'via'                         # Keyboard configuration desktop client (disabled 2026-09-01)
+#cask 'vial'                        # Keyboard configuration desktop client (disabled 2026-09-01)
 cask 'bazecor'                     # Keyboard config for Dygma Defy keyboard
 
 cask 'karabiner-elements'          # Keyboard customization tool - paid
@@ -265,12 +265,12 @@ cask 'leader-key'                  # Keyboard App launcher
 cask 'choosy'                    # Choose which browser to open links in - Default
 cask 'brave-browser'
 cask 'firefox'
-cask 'google-chrome'
-cask 'yab'                       # Yab - Arc-like WebKit browser with AI (yetanotherbrowser/tap)
+#cask 'google-chrome'   # not needed
+cask 'yab', args: { require_sha: false }          # Yab - Arc-like WebKit browser with AI (yetanotherbrowser/tap)
 
 # Fonts
-cask 'sf-symbols'
-brew 'font-sf-pro'
+cask 'sf-symbols', args: { require_sha: false }
+#brew 'font-sf-pro'   # formula removed upstream
 cask 'font-inter'                     
 cask 'font-lilex'
 cask 'font-lilex-nerd-font'           
@@ -287,20 +287,20 @@ cask 'markdown-preview'               # Markdown editor
 cask 'zed'                            # Code editor - Rust
 
 # AI tooling and ADEs (AI/Agent Development Environment)
-cask 'ollama'
+cask 'ollama-app'
 brew 'ollama'
 
 brew 'can1357/tap/omp'                # oh-my-pi 
 cask 'claude'                         # Claude Desktop
 cask 'claude-code'                    # Claude Code
 cask 'codex'                          # Codex cli
-cask 'codex-app'                      # Codex Desktop 
+cask 'chatgpt'                        # Codex Desktop app discontinued, replaced by chatgpt
 brew 'crit'                           # Visual feedback with agents
-brew 'whisper-cpp'                    # TTS utility
+brew 'whisper.cpp'              # TTS utility (renamed from whisper-cpp)
 
 # Terminal emulators
 #cask 'tern' 
-cask 'wezterm@nightly'
+#cask 'wezterm@nightly'   # conflicts with installed wezterm
 cask 'kitty'
 cask 'ghostty'
 cask 'herdr-app'
@@ -311,13 +311,13 @@ cask 'herdr-app'
 
 # Mac OS Quick-Look Plugins
 cask 'qlcolorcode'    # QL for code with highlighting
-cask 'qlimagesize'    # QL for size info for images
+#cask 'qlimagesize'    # QL for size info for images (cask removed upstream)
 cask 'qlmarkdown'     # QL for markdown files
 cask 'qlprettypatch'  # QL for patch / diff files
 cask 'qlstephen'      # QL for dev text files
-cask 'qlvideo'        # QL for video formats
+cask 'quicklook-video'        # QL for video formats (renamed from qlvideo)
 cask 'quicklook-csv'  # QL for tables in CSV format
-cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
+#cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees (disabled 2025-12-23)
 cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
 
 # Mac App Store Installs

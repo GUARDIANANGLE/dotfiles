@@ -15,14 +15,9 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DIR"
 ###########################################################################################
 # Variables for system preferences and settings                                           #
-# NOTE: I use a multi Mac workflow, so I have to set the computer name based on the model #
+# NOTE: Do NOT rename the computer — keep the user's existing name.                        #
 ###########################################################################################
-IS_MACBOOK=`system_profiler SPSoftwareDataType SPHardwareDataType | grep "Model Name" | grep "Book"`;
-if [ "$IS_MACBOOK" != "" ]; then
-COMPUTER_NAME="MacDaddy";
-else
-COMPUTER_NAME="BigMac";
-fi
+COMPUTER_NAME=$(scutil --get ComputerName);
 # echo "Computer name: $COMPUTER_NAME" # DEBUG
 . ../scripts/functions.sh;
   info "Configuring macOS defaults...";
@@ -31,14 +26,8 @@ sudo -v;
 # # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-substep_info "Setting computer name to $COMPUTER_NAME";
-
-sudo scutil --set ComputerName "$COMPUTER_NAME";
-sudo scutil --set LocalHostName "$COMPUTER_NAME";
-sudo scutil --set HostName "$COMPUTER_NAME";
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME";
-
-substep_success "Computer name set to $COMPUTER_NAME";
+substep_info "Keeping computer name as $COMPUTER_NAME";
+# (The original script renamed the machine to the author's hostname; that is disabled here.)
 
 substep_info "Configuring MacOS system settings and preferences...";
 source "$DIR/01-preferences.sh"

@@ -43,7 +43,7 @@ readonly STOW_PACKAGES=(dots git fish zsh config neovim local readinglist)
 # Flag defaults
 SKIP_CONFIRM=0
 SKIP_PACKAGES=0
-SKIP_MACOS=0
+SKIP_MACOS=1   # Default to SAFE: do NOT apply the author's macOS system/security prefs
 
 # ────────────────────────────────────────────────────────────────
 # Self-detection + remote bootstrap
@@ -219,27 +219,48 @@ cmd_bootstrap() {
 
   mkdir -p "$PROJECTS_DIR"
 
+  # Track failures so a single failing step doesn't abort the whole run.
+  FAILED_STEPS=""
+
   if [ "$SKIP_PACKAGES" -eq 0 ]; then
     info "Installing language/package managers..."
     # packages.sh uses relative paths internally; run it from its own dir
-    (cd "$SCRIPT_DIR/packages" && . ./packages.sh)
+    if ! (cd "$SCRIPT_DIR/packages" && . ./packages.sh); then
+      substep_error "Language/package managers step failed."
+      FAILED_STEPS="$FAILED_STEPS packages"
+    fi
   else
     info "Skipping packages (--no-packages)"
   fi
 
-  _run_stow strict "${STOW_PACKAGES[@]}"
-
-  (cd "$SCRIPT_DIR/duti" && . ./duti.sh)
-
-  if [ "$SKIP_MACOS" -eq 0 ]; then
-    (cd "$SCRIPT_DIR/macos" && . ./macos.sh)
-  else
-    info "Skipping macOS sysprefs (--no-macos)"
+  if ! _run_stow strict "${STOW_PACKAGES[@]}"; then
+    substep_error "Stow step failed."
+    FAILED_STEPS="$FAILED_STEPS stow"
   fi
 
-  (cd "$SCRIPT_DIR/git" && . ./git.sh)
+  if ! (cd "$SCRIPT_DIR/duti" && . ./duti.sh); then
+    substep_error "duti step failed."
+    FAILED_STEPS="$FAILED_STEPS duti"
+  fi
 
-  install_empryo
+  if [ "$SKIP_MACOS" -eq 0 ]; then
+    if ! (cd "$SCRIPT_DIR/macos" && . ./macos.sh); then
+      substep_error "macOS prefs step failed."
+      FAILED_STEPS="$FAILED_STEPS macos"
+    fi
+  else
+    info "Skipping macOS system/security prefs (default). Pass --macos to apply the author's settings."
+  fi
+
+  if ! (cd "$SCRIPT_DIR/git" && . ./git.sh); then
+    substep_error "git config step failed."
+    FAILED_STEPS="$FAILED_STEPS git"
+  fi
+
+  if ! install_empryo; then
+    substep_error "Empryo step failed."
+    FAILED_STEPS="$FAILED_STEPS empryo"
+  fi
 
   # Executed, not sourced: set -e is ignored inside a `||` subshell, and this
   # step is optional (it needs Full Disk Access), so failure only warns.
@@ -261,18 +282,29 @@ cmd_bootstrap() {
     fi
   fi
 
-  success "Dotfile setup complete."
+  if [ -n "$FAILED_STEPS" ]; then
+    warning "Setup finished, but some steps failed:$FAILED_STEPS"
+    warning "Review the messages above and re-run the relevant step (or 'just link' / 'brew bundle')."
+  else
+    success "Dotfile setup complete."
+  fi
 }
 
 # Empryo's own installer. Runs after stow so the first launch reads the seeded
 # config.json instead of writing defaults. Idempotent: a present binary skips it.
 install_empryo() {
-  if [ -x "$HOME/.empryo/bin/empryo" ]; then
-    info "Empryo already installed — skipping"
-    return 0
-  fi
-  info "Installing Empryo..."
-  curl -fsSL https://empryo.com/install.sh | bash
+  # Empryo is the author's own AI-agent tooling. Installing it executes a remote
+  # script from empryo.com, so it is disabled by default for safety. To opt in,
+  # remove this guard or run `bash install.sh` after reviewing the source.
+  info "Skipping Empryo install (author's personal tooling; disabled for safety)."
+  return 0
+  # Original behavior (kept for reference):
+  # if [ -x "$HOME/.empryo/bin/empryo" ]; then
+  #   info "Empryo already installed — skipping"
+  #   return 0
+  # fi
+  # info "Installing Empryo..."
+  # curl -fsSL https://empryo.com/install.sh | bash
 }
 
 # ────────────────────────────────────────────────────────────────
@@ -301,6 +333,7 @@ while [ "$#" -gt 0 ]; do
   -y | --yes) SKIP_CONFIRM=1 ;;
   --no-packages) SKIP_PACKAGES=1 ;;
   --no-macos) SKIP_MACOS=1 ;;
+  --macos) SKIP_MACOS=0 ;;   # opt IN to the author's macOS system/security prefs (use with caution)
   -h | --help)
     cmd_help
     exit 0

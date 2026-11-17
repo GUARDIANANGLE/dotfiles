@@ -24,8 +24,13 @@ install_brew_packages() {
   fi
   info "Installing Homebrew packages..."
   brew update
-  brew upgrade
-  brew bundle --file="$brew_packages"
+  brew upgrade || substep_info "brew upgrade had issues (continuing)"
+  # `brew bundle` fails wholesale when a single formula/cask can't install.
+  # Run it with `--no-lock` and tolerate failure so one broken entry (e.g. a
+  # newly-disabled cask) doesn't abort the whole provisioning run.
+  if ! brew bundle --file="$brew_packages" --no-lock; then
+    substep_error "Some Brewfile entries failed to install. Re-run `brew bundle` after reviewing, or comment out the offending entries. Continuing with the rest of the setup."
+  fi
   success "Finished installing Homebrew packages."
 }
 
@@ -35,16 +40,19 @@ install_node_packages() {
   if ! command -v fnm &>/dev/null; then
     substep_info "Installing FNM..."
     curl -fsSL https://fnm.vercel.app/install | bash
-    eval "$(fnm env --use-on-cd)" # needed to install npm packages - already set for Fish
     substep_success "FNM installed."
   fi
+
+  # Always inject fnm's env so `fnm use`/`node`/`npm` resolve to the fnm-managed
+  # version regardless of whether fnm was just installed or already present.
+  # `--use-on-cd` keeps it lazy; explicit `--shell bash` avoids "can't infer shell".
+  eval "$(fnm env --use-on-cd --shell bash)" || true
 
   # Install latest LTS version of Node with FNM and set as default
   if ! fnm use --lts &>/dev/null; then
     info "Installing latest LTS version of Node..."
     fnm install --lts
     fnm alias lts-latest default
-    fnm use default
     substep_success "Node LTS installed and set as default for FNM."
   fi
 

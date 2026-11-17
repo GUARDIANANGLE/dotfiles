@@ -12,13 +12,17 @@ DESTINATION="$(realpath ~)"
 # Get computer name
 computer_name=$(scutil --get ComputerName)
 
-if [ "$computer_name" = "BigMac" ]; then
+# Link a machine-specific gitconfig if one exists for this computer name,
+# otherwise fall back to the generic .gitconfig.local without failing.
+if [ "$computer_name" = "BigMac" ] && [ -f "$SOURCE/gitconfig-bigmac.local" ]; then
   symlink "$SOURCE/gitconfig-bigmac.local" "$DESTINATION/.gitconfig.local"
-elif [ "$computer_name" = "MacDaddy" ]; then
+elif [ "$computer_name" = "MacDaddy" ] && [ -f "$SOURCE/gitconfig-macdaddy.local" ]; then
   symlink "$SOURCE/gitconfig-macdaddy.local" "$DESTINATION/.gitconfig.local"
+elif [ -f "$SOURCE/gitconfig-bigmac.local" ]; then
+  info "No machine-specific gitconfig for '$computer_name'; using generic gitconfig-bigmac.local"
+  symlink "$SOURCE/gitconfig-bigmac.local" "$DESTINATION/.gitconfig.local"
 else
-  echo "Unknown computer name: $computer_name"
-  exit 1
+  info "No .gitconfig.local source found; skipping machine-specific git config (not an error)"
 fi
 
 # Ensure this machine's SSH signing key is registered on GitHub as a signing key.
