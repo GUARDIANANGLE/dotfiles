@@ -5,8 +5,8 @@
     "version": "0.3.0",
     "min_herdr_version": "0.8.0",
     "description": "Comment on terminal selections and copy annotations as agent context.",
-    "manifest_path": "/Users/ed/.config/herdr/plugins/github/annotate-9c299759567c/herdr-plugin.toml",
-    "plugin_root": "/Users/ed/.config/herdr/plugins/github/annotate-9c299759567c",
+    "manifest_path": "/Users/pp/.config/herdr/plugins/github/annotate-9c299759567c/herdr-plugin.toml",
+    "plugin_root": "/Users/pp/.config/herdr/plugins/github/annotate-9c299759567c",
     "enabled": true,
     "platforms": [
       "linux",
@@ -80,7 +80,7 @@
       "owner": "plannotator",
       "repo": "herdr-annotate",
       "resolved_commit": "dc871270c273bdeb457b8c0f9f72f40d6ca30925",
-      "managed_path": "/Users/ed/.config/herdr/plugins/github/annotate-9c299759567c",
+      "managed_path": "/Users/pp/.config/herdr/plugins/github/annotate-9c299759567c",
       "installed_unix_ms": 1787867672051
     }
   },
@@ -90,8 +90,8 @@
     "version": "0.2.13",
     "min_herdr_version": "0.9.1",
     "description": "A coordinator conversation, parallel worker threads, shared memory and an overview of what needs you.",
-    "manifest_path": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c/herdr-plugin.toml",
-    "plugin_root": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c",
+    "manifest_path": "/Users/pp/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c/herdr-plugin.toml",
+    "plugin_root": "/Users/pp/.dotfiles/config/.config/herdr/plugins/github/herdr-projects-b1278ffb803c",
     "enabled": true,
     "platforms": [
       "macos",
@@ -285,7 +285,7 @@
       "owner": "eliasstravik",
       "repo": "herdr-projects",
       "resolved_commit": "5b7a0e61733cd9950fe451e30e7a76d155ea335c",
-      "managed_path": "/Users/ed/.config/herdr/plugins/github/herdr-projects-b1278ffb803c",
+      "managed_path": "/Users/pp/.config/herdr/plugins/github/herdr-projects-b1278ffb803c",
       "installed_unix_ms": 1790281025798
     }
   },
@@ -295,8 +295,8 @@
     "version": "0.3.0",
     "min_herdr_version": "0.7.0",
     "description": "Report a per-agent emoji/glyph as the $icon sidebar token.",
-    "manifest_path": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/local.agent-icons-da004f570912/herdr-plugin.toml",
-    "plugin_root": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/local.agent-icons-da004f570912",
+    "manifest_path": "/Users/pp/.dotfiles/config/.config/herdr/plugins/github/local.agent-icons-da004f570912/herdr-plugin.toml",
+    "plugin_root": "/Users/pp/.dotfiles/config/.config/herdr/plugins/github/local.agent-icons-da004f570912",
     "enabled": true,
     "platforms": [
       "linux",
@@ -343,7 +343,7 @@
       "owner": "adihex",
       "repo": "herdr-agent-icons",
       "resolved_commit": "13426dd7b505bebe991dbec98ce46b78a79830ba",
-      "managed_path": "/Users/ed/.config/herdr/plugins/github/local.agent-icons-da004f570912",
+      "managed_path": "/Users/pp/.config/herdr/plugins/github/local.agent-icons-da004f570912",
       "installed_unix_ms": 1790011981105
     }
   },
@@ -353,8 +353,8 @@
     "version": "0.7.0",
     "min_herdr_version": "0.8.0",
     "description": "AI agent plan-usage gauges (Claude Code / Codex / Grok, optional Droid / Antigravity) in the herdr tab bar",
-    "manifest_path": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c/herdr-plugin.toml",
-    "plugin_root": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c",
+    "manifest_path": "/Users/pp/.dotfiles/config/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c/herdr-plugin.toml",
+    "plugin_root": "/Users/pp/.dotfiles/config/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c",
     "enabled": true,
     "platforms": [
       "macos",
@@ -428,7 +428,7 @@
       "owner": "speardragon",
       "repo": "herdr-status-ui-bar",
       "resolved_commit": "cbad29d4c5d8a79f6d674da51e029d1e69414589",
-      "managed_path": "/Users/ed/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c",
+      "managed_path": "/Users/pp/.config/herdr/plugins/github/speardragon.herdr-status-ui-bar-08cd3492079c",
       "installed_unix_ms": 1790015164217
     }
   },
@@ -438,8 +438,8 @@
     "version": "0.2.2",
     "min_herdr_version": "0.8.0",
     "description": "Command palette for herdr: built-in operations (tab/workspace/pane) AND every action of every installed plugin, in one Sublime-Text-style picker. Origin tab/pane ids are captured server-side before the popup takes focus and forwarded via --env.",
-    "manifest_path": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/vjeantet.palette-4b6ca9093d1d/herdr-plugin.toml",
-    "plugin_root": "/Users/ed/.dotfiles/config/.config/herdr/plugins/github/vjeantet.palette-4b6ca9093d1d",
+    "manifest_path": "/Users/pp/.dotfiles/config/.config/herdr/plugins/github/vjeantet.palette-4b6ca9093d1d/herdr-plugin.toml",
+    "plugin_root": "/Users/pp/.dotfiles/config/.config/herdr/plugins/github/vjeantet.palette-4b6ca9093d1d",
     "enabled": true,
     "platforms": [
       "macos",
@@ -495,7 +495,7 @@
       "owner": "vjeantet",
       "repo": "herdr-palette",
       "resolved_commit": "8f4c6bf5cf6102cec31cfbd5a09ccbb4dcaceb44",
-      "managed_path": "/Users/ed/.config/herdr/plugins/github/vjeantet.palette-4b6ca9093d1d",
+      "managed_path": "/Users/pp/.config/herdr/plugins/github/vjeantet.palette-4b6ca9093d1d",
       "installed_unix_ms": 1789830211586
     }
   }

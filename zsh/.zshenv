@@ -12,4 +12,4 @@ export PATH="$HOME/.bun/bin:$PATH"
 . "$HOME/.vite-plus/env"
 
 # Added by jcode installer
-export PATH="/Users/ed/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

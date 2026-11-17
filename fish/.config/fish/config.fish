@@ -39,7 +39,7 @@ if status is-interactive
 end
 
 # pnpm
-set -gx PNPM_HOME /Users/ed/Library/pnpm
+set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- "$PNPM_HOME/bin" $PATH
     set -gx PATH "$PNPM_HOME/bin" $PATH
 end
@@ -49,7 +49,7 @@ end
 fish_add_path "$HOME/.local/bin"
 
 # Added by codebase-memory-mcp install
-fish_add_path /Users/ed/.local/bin
+fish_add_path "$HOME/.local/bin"
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
@@ -61,7 +61,7 @@ but completions fish | source
 
 
 # Added by Antigravity CLI installer
-set -gx PATH "/Users/ed/.local/bin" $PATH
+set -gx PATH "$HOME/.local/bin" $PATH
 
 # Empryo
 set -gx PATH $HOME/.empryo/bin $PATH

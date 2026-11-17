@@ -86,7 +86,7 @@ case "$ZSH_PROMPT" in
 esac
 
 # --- Atlas ---
-alias atlas='bun /Users/ed/.claude/skills/PAI/Tools/pai.ts'
+alias atlas='bun /Users/pp/.claude/skills/PAI/Tools/pai.ts'
 
 # --- Nvim shell integration ---
 if [[ "$TERM_PROGRAM" == "nvim" ]]; then

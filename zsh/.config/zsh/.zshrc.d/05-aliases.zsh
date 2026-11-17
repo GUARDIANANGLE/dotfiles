@@ -32,7 +32,7 @@ alias tree='eza -Ta --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 alias ltd='eza -TaD --icons --ignore-glob="node_modules|.git|.vscode|.DS_Store"'
 
 # Shortcuts
-alias fld='cd "/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱"'
+alias fld='cd "/Users/pp/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱"'
 alias fabric="fabric-ai"
 alias mux="tmux"
 alias j ="just"

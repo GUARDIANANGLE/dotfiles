@@ -86,19 +86,19 @@ import {
     d: 
       y: open("~/Documents/3D-CAD"),
       u: open(
-        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
+        "'/Users/pp/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
       ),
       i: open("~/Documents"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
       h: open("~/"),
       j: open(
-        "'/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
+        "'/Users/pp/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
       ),
       k: open("~/Developer/"),
       l: open("~/Sites/"),
       semicolon: open(
-        "'/Users/ed/Library/Mobile Documents/com~apple~CloudDocs'",
+        "'/Users/pp/Library/Mobile Documents/com~apple~CloudDocs'",
       ),,
   }),
 

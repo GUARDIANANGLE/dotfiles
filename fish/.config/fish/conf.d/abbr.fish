@@ -15,7 +15,7 @@ if status is-interactive
     abbr --add dls '~/Downloads/'
     abbr --add dots 'cd ~/.dotfiles'
     abbr --add neoed 'cd ~/.dotfiles/neovim/.config/nvim/'
-    abbr --add fld "cd \"/Users/ed/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
+    abbr --add fld "cd \"/Users/pp/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱\""
     abbr --add local '~/.local/'
     abbr --add sites 'cd ~/Sites'
     abbr --add wall '~/.wallpapers/'

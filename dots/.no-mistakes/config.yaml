@@ -15,7 +15,7 @@ forge_profiles:
     expected_login: Atlas-Key
   github.com:
     gh_config_dir: ~/.config/gh
-    expected_login: edheltzel
+    expected_login: GUARDIANANGLE
 
 # Optional path to the user-installed acpx binary for acp:<target> agents
 # acpx_path: acpx

@@ -147,59 +147,59 @@
         {
           "key" : "0",
           "type" : "folder",
-          "value" : "/Users/ed/Desktop"
+          "value" : "/Users/pp/Desktop"
         },
         {
           "key" : "A",
           "type" : "folder",
-          "value" : "/Users/ed/Developer/AI"
+          "value" : "/Users/pp/Developer/AI"
         },
         {
           "key" : "a",
           "type" : "folder",
-          "value" : "/Users/ed/Developer/Atlas"
+          "value" : "/Users/pp/Developer/Atlas"
         },
         {
           "iconPath" : "person.2",
           "key" : "c",
           "type" : "folder",
-          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
+          "value" : "/Users/pp/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients"
         },
         {
           "key" : "d",
           "type" : "folder",
-          "value" : "/Users/ed/Developer"
+          "value" : "/Users/pp/Developer"
         },
         {
           "key" : "i",
           "type" : "folder",
-          "value" : "/Users/ed/Library/Mobile Documents/com~apple~CloudDocs"
+          "value" : "/Users/pp/Library/Mobile Documents/com~apple~CloudDocs"
         },
         {
           "key" : "D",
           "type" : "folder",
-          "value" : "/Users/ed/Documents"
+          "value" : "/Users/pp/Documents"
         },
         {
           "key" : "o",
           "type" : "folder",
-          "value" : "/Users/ed/Downloads"
+          "value" : "/Users/pp/Downloads"
         },
         {
           "key" : "p",
           "type" : "folder",
-          "value" : "/Users/ed/Pictures"
+          "value" : "/Users/pp/Pictures"
         },
         {
           "key" : "s",
           "type" : "folder",
-          "value" : "/Users/ed/Sites"
+          "value" : "/Users/pp/Sites"
         },
         {
           "iconPath" : "view.3d",
           "key" : "y",
           "type" : "folder",
-          "value" : "/Users/ed/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive/≺ HeltzelMade ≻/3D-CAD"
+          "value" : "/Users/pp/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive/≺ HeltzelMade ≻/3D-CAD"
         }
       ],
       "iconPath" : "/System/Library/CoreServices/Finder.app",
