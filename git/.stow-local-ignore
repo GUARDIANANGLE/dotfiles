@@ -10,5 +10,6 @@ AGENTS.md
 
 gitconfig-bigmac.local
 gitconfig-macdaddy.local
+.gitconfig.local
 
 git.sh
