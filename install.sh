@@ -19,7 +19,7 @@
 #   -h, --help        Show help and exit
 #
 # Remote one-liner:
-#   bash -c "$(curl -fsSL https://raw.githubusercontent.com/edheltzel/dotfiles/master/install.sh)" -- bootstrap
+#   bash -c "$(curl -fsSL https://raw.githubusercontent.com/GUARDIANANGLE/dotfiles/master/install.sh)" -- bootstrap
 
 set -euo pipefail
 
@@ -32,7 +32,7 @@ fi
 # ────────────────────────────────────────────────────────────────
 # Config
 # ────────────────────────────────────────────────────────────────
-readonly SOURCE_REPO="https://github.com/edheltzel/dotfiles"
+readonly SOURCE_REPO="https://github.com/GUARDIANANGLE/dotfiles"
 readonly TARBALL_URL="${SOURCE_REPO}/tarball/master"
 readonly DOTFILES_DIR="${DOTFILES_DIR:-$HOME/.dotfiles}"
 readonly PROJECTS_DIR="${PROJECTS_DIR:-$HOME/Developer}"

@@ -34,7 +34,7 @@ macOS 上的个人 dotfiles 配置，基于 [Fish shell](https://fishshell.com/)
    - `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 3. 克隆仓库：
    ```shell
-   git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles
+   git clone https://github.com/GUARDIANANGLE/dotfiles.git ~/.dotfiles
    ```
 4. 用 `justfile` 完成后续配置（见下）
 5. 配置完成后，运行 `upp`（即 `topgrade --yes`）更新所有软件包
@@ -49,13 +49,13 @@ macOS 上的个人 dotfiles 配置，基于 [Fish shell](https://fishshell.com/)
 克隆仓库到 `~/.dotfiles` 后引导机器（未经全新安装测试，运行前请先阅读 `install.sh` 和 `justfile`）：
 
 ```shell
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/edheltzel/dotfiles/master/install.sh)" -- bootstrap
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/GUARDIANANGLE/dotfiles/master/install.sh)" -- bootstrap
 ```
 
 或先克隆再本地运行：
 
 ```shell
-git clone https://github.com/edheltzel/dotfiles.git ~/.dotfiles
+git clone https://github.com/GUARDIANANGLE/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles && ./install.sh bootstrap
 ```
 
