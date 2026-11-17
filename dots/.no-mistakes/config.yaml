@@ -8,7 +8,7 @@
 agent: [codex, claude]
 
 # Per-identity GitHub routing. Recall's origin uses the github-atlas SSH alias so
-# its PRs are opened as Atlas-Key; every other github.com repo keeps edheltzel.
+# its PRs are opened as Atlas-Key; every other github.com repo keeps GUARDIANANGLE.
 forge_profiles:
   github-atlas:
     gh_config_dir: ~/.config/gh-atlas-key

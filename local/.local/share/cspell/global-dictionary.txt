@@ -39,7 +39,6 @@ Descr
 dictsort
 dotfiles
 easymotion
-edheltzel
 Elbritch
 eleventy
 elif
