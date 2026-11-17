@@ -121,95 +121,95 @@ return {
 
     -- Create custom command for URL-based reading notes
     vim.api.nvim_create_user_command("ObsidianNewReading", function()
-      vim.ui.input({ prompt = "Enter URL: " }, function(url)
+      vim.ui.input({ prompt = "输入网址: " }, function(url)
         if not url or url == "" then
-          vim.notify("No URL provided", vim.log.levels.WARN)
+          vim.notify("未输入网址", vim.log.levels.WARN)
           return
         end
 
         -- Store URL for template substitution
         reading_url = url
 
-        vim.notify("Fetching page title...", vim.log.levels.INFO)
+        vim.notify("正在抓取网页标题...", vim.log.levels.INFO)
 
         -- Fetch OG title
         local title = fetch_og_title(url)
         if not title then
-          vim.notify("Could not fetch title, using domain", vim.log.levels.WARN)
+          vim.notify("无法抓取标题，改用域名", vim.log.levels.WARN)
           -- Extract domain as fallback title
-          title = url:match("https?://([^/]+)") or url:match("://([^/]+)") or "Reading Note"
+          title = url:match("https?://([^/]+)") or url:match("://([^/]+)") or "阅读笔记"
         end
 
-        vim.notify("Creating note: " .. title, vim.log.levels.INFO)
+        vim.notify("正在创建笔记: " .. title, vim.log.levels.INFO)
 
         -- Use Obsidian command API for stability across plugin updates
         vim.schedule(function()
           vim.cmd("Obsidian new_from_template '" .. title:gsub("'", "\\'") .. "' 'New-Reading'")
         end)
       end)
-    end, { desc = "Create a new reading note from URL" })
+    end, { desc = "从网址创建阅读笔记" })
 
     -- Create custom command for book notes
     vim.api.nvim_create_user_command("ObsidianNewBook", function()
-      vim.ui.input({ prompt = "Enter book title: " }, function(title)
+      vim.ui.input({ prompt = "输入书名: " }, function(title)
         if not title or title == "" then
-          vim.notify("No title provided", vim.log.levels.WARN)
+          vim.notify("未输入书名", vim.log.levels.WARN)
           return
         end
 
         -- Store title for template substitution
         book_title = title
 
-        vim.notify("Creating book note: " .. title, vim.log.levels.INFO)
+        vim.notify("正在创建读书笔记: " .. title, vim.log.levels.INFO)
 
         -- Use Obsidian command API for stability across plugin updates
         vim.schedule(function()
           vim.cmd("Obsidian new_from_template '" .. title:gsub("'", "\\'") .. "' 'New-Book'")
         end)
       end)
-    end, { desc = "Create a new book note" })
+    end, { desc = "创建读书笔记" })
 
     -- Which-Key group and keybindings
     local wk = require("which-key")
     wk.add({
       { "<leader>fo", group = "Obsidian", icon = { icon = "󰠮", color = "purple" } },
-      { "<leader>fot", ":Obsidian tags ", desc = "Search by tags", icon = { icon = "", color = "orange" } },
-      { "<leader>fob", ":Obsidian backlinks<CR>", desc = "Show backlinks", icon = { icon = "⬅", color = "cyan" } },
+      { "<leader>fot", ":Obsidian tags ", desc = "按标签搜索", icon = { icon = "", color = "orange" } },
+      { "<leader>fob", ":Obsidian backlinks<CR>", desc = "查看反向链接", icon = { icon = "⬅", color = "cyan" } },
       {
         "<leader>fo0",
         ":Obsidian open<CR>",
-        desc = "Open in Obsidian app",
+        desc = "在 Obsidian 应用中打开",
         icon = { icon = "󱓞", color = "purple" },
       },
-      { "<leader>fos", ":Obsidian search<CR>", desc = "Search notes", icon = { icon = "", color = "cyan" } },
-      { "<leader>foq", ":Obsidian quick_switch<CR>", desc = "Quick switch", icon = { icon = "⚡", color = "purple" } },
-      { "<leader>fol", ":Obsidian link<CR>", desc = "Insert Link", icon = { icon = "", color = "blue" } },
-      { "<leader>foL", ":Obsidian link_new ", desc = "Create & Link Note", icon = { icon = "", color = "green" } },
+      { "<leader>fos", ":Obsidian search<CR>", desc = "搜索笔记", icon = { icon = "", color = "cyan" } },
+      { "<leader>foq", ":Obsidian quick_switch<CR>", desc = "快速切换", icon = { icon = "⚡", color = "purple" } },
+      { "<leader>fol", ":Obsidian link<CR>", desc = "插入链接", icon = { icon = "", color = "blue" } },
+      { "<leader>foL", ":Obsidian link_new ", desc = "新建并链接笔记", icon = { icon = "", color = "green" } },
       {
         "<leader>foc",
         ":Obsidian toggle_checkbox<CR>",
-        desc = "Toggle checkbox",
+        desc = "切换复选框",
         icon = { icon = "", color = "green" },
       },
       {
         "<leader>foNr",
         ":ObsidianNewReading<CR>",
-        desc = "Add new read later",
+        desc = "收藏文章（稍后读）",
         icon = { icon = "", color = "orange" },
       },
-      { "<leader>foNb", ":ObsidianNewBook<CR>", desc = "Add new book", icon = { icon = "󱉟", color = "orange" } },
-      { "<leader>foNn", ":Obsidian new ", desc = "New note", icon = { icon = "", color = "blue" } },
-      { "<leader>foNt", ":Obsidian today<CR>", desc = "Daily Note for Today", icon = { icon = "󰃶", color = "red" } },
+      { "<leader>foNb", ":ObsidianNewBook<CR>", desc = "新建读书笔记", icon = { icon = "󱉟", color = "orange" } },
+      { "<leader>foNn", ":Obsidian new ", desc = "新建笔记", icon = { icon = "", color = "blue" } },
+      { "<leader>foNt", ":Obsidian today<CR>", desc = "今天的日记", icon = { icon = "󰃶", color = "red" } },
       {
         "<leader>foNm",
         ":Obsidian tomorrow<CR>",
-        desc = "Daily Note for Tomorrow",
+        desc = "明天的日记",
         icon = { icon = "▶", color = "grey" },
       },
       {
         "<leader>foNy",
         ":Obsidian yesterday<CR>",
-        desc = "Daily Note for Yesterday",
+        desc = "昨天的日记",
         icon = { icon = "◀", color = "grey" },
       },
     })

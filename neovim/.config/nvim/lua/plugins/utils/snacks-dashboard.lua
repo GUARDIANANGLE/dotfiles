@@ -17,7 +17,7 @@ return {
           {
             icon = "󱈅 ",
             key = "o",
-            desc = "Find Session",
+            desc = "恢复会话",
             action = function()
               require("persistence").select()
             end,
@@ -25,7 +25,7 @@ return {
           {
             icon = "⊙ ",
             key = "d",
-            desc = "DOTFILES",
+            desc = "打开配置仓库",
             action = function()
               open_project("~/.dotfiles")
             end,
@@ -33,7 +33,7 @@ return {
           {
             icon = "\u{E6AE} ",
             key = "v",
-            desc = "NEO.ED",
+            desc = "打开 Nvim 配置",
             action = function()
               open_project("~/.dotfiles/neovim/.config/nvim")
             end,
@@ -41,12 +41,12 @@ return {
           {
             icon = "\u{F082E} ",
             key = "n",
-            desc = "FieldNotes✱",
+            desc = "打开 FieldNotes 笔记库",
             action = function()
               open_project("~/Library/Mobile Documents/iCloud~md~obsidian/Documents/FieldNotes✱")
             end,
           },
-          { icon = "󰩈 ", key = "q", desc = "Quit", action = ":qa" },
+          { icon = "󰩈 ", key = "q", desc = "退出", action = ":qa" },
         },
         header = [[
         ███╗   ██╗███████╗ ██████╗    ███████╗██████╗
