@@ -9,7 +9,7 @@ return {
         function()
           require("noice").cmd("pick")
         end,
-        desc = "通知历史",
+        desc = "Notification History",
       },
     },
     opts = {
