@@ -92,8 +92,12 @@ install_pnpm_packages() {
   fi
 
   info "Installing pnpm global packages..."
-  pnpm add -g $(cat $pnpm_packages)
-  success "All pnpm global packages installed."
+  if [ -f "$pnpm_packages" ] && [ -s "$pnpm_packages" ]; then
+    pnpm add -g $(cat "$pnpm_packages")
+    success "All pnpm global packages installed."
+  else
+    info "No pnpm_packages.txt (or it is empty); skipping pnpm global packages."
+  fi
 }
 
 # Install Ruby with rbenv, set 3.3.6 as default, then install gems
