@@ -100,3 +100,10 @@ config/.config/herdr/session.json
 config/.config/herdr/session-snapshots/
 config/.config/herdr/plugins/config/
 local/.local/share/gh/extensions/gh-markdown-preview/
+
+### Raycast runtime state (extensions + node compile cache are generated) ###
+config/.config/raycast/extensions/
+config/.config/raycast/node-compile-cache/
+
+### Stale untracked copy left over from the neovim -> neoed rename (real config is in neovim/) ###
+neoed/
