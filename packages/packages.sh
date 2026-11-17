@@ -137,9 +137,13 @@ install_rust_packages() {
   rustup update
   # One line per package. First token is the crate name; any remaining tokens
   # are passed through to `cargo install` (e.g. `--git <url>` for non-crates.io).
+  # Tolerate per-crate failures so one broken crate (e.g. a library with no
+  # binary, or a dead --git URL) doesn't abort the rest.
   while read -r line; do
     case "$line" in '' | \#*) continue ;; esac
-    cargo install $line
+    if ! cargo install $line; then
+      substep_error "Failed to cargo install: $line (continuing)"
+    fi
   done <"$rust_packages"
   success "Finished installing Rust packages."
 }
