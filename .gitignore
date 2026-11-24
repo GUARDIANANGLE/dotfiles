@@ -32,7 +32,11 @@ data
 config/.config/lazygit/state.yml
 
 ### Karabiner ###
-karabiner/automatic_backups/
+config/.config/karabiner/automatic_backups/
+
+### Python cache ###
+__pycache__/
+*.pyc
 
 ### Raycast Extensions ###
 config/raycast/extensions/
@@ -66,6 +70,9 @@ config/.config/zellij/plugins/*.wasm
 
 ### Local app state (runtime DBs, not config) ###
 banks/
+
+### Private keyboard/mouse macros (bind personal app paths) ###
+local/.local/share/keyboards-mouse/Elecom/
 
 ### Merge backups ###
 *.orig

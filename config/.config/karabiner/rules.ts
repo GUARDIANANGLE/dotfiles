@@ -86,14 +86,14 @@ import {
     d: 
       y: open("~/Documents/3D-CAD"),
       u: open(
-        "'/Users/pp/Library/CloudStorage/GoogleDrive-ed@rainyday.media/Shared drives/Clients'",
+        "'/Users/pp/Library/CloudStorage/GoogleDrive-you@example.com/Shared drives/Clients'",
       ),
       i: open("~/Documents"),
       o: open("~/Downloads"),
       p: open("~/Desktop"),
       h: open("~/"),
       j: open(
-        "'/Users/pp/Library/CloudStorage/GoogleDrive-ed@rainyday.media/My Drive'",
+        "'/Users/pp/Library/CloudStorage/GoogleDrive-you@example.com/My Drive'",
       ),
       k: open("~/Developer/"),
       l: open("~/Sites/"),

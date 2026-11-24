@@ -2,7 +2,7 @@
 	"name": "karabiner",
 	"version": "1.0.0",
 	"main": "index.js",
-	"author": "Ed Heltzel <ed@rainyday.media> -> originally by Max Stoiber <contact@mxstbr.com>",
+	"author": "originally by Max Stoiber <contact@mxstbr.com>",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^24.10.1",

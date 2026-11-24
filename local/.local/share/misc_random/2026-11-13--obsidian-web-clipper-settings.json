@@ -230,7 +230,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "✱FieldNotes/Plans",
-    "noteContentFormat": "[[HQ]] / [[MakerHub]] / [[HeltzelMade]] / [[3D Modeling & Printing]] / [[Product Ideas]] \n\n---\n\n{{content}}",
+    "noteContentFormat": "[[Inbox]] / [[Notes]] / [[3D Modeling]] / [[Product Ideas]] \n\n---\n\n{{content}}",
     "properties": [
       {
         "id": "1779475071937gr7xjakl6",

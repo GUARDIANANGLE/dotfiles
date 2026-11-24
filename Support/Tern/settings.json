@@ -133,15 +133,15 @@
       {
         "name": "RDM",
         "identity": {
-          "name": "Ed Heltzel",
-          "email": "ed@rainyday.media"
+          "name": "Your Name",
+          "email": "you@example.com"
         }
       },
       {
         "name": "Atlas",
         "identity": {
           "name": "Atlas",
-          "email": "atlas@rainyday.media"
+          "email": "atlas@example.com"
         }
       }
     ],
