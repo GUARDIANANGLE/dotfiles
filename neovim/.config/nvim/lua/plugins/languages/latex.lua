@@ -47,14 +47,16 @@ return {
             },
           },
         },
-        -- Disable LTeX (English spelling/grammar checker) for .tex files:
-        -- it floods Chinese LaTeX docs with false positives like
-        -- "Possible spelling mistake" / "does not start with an uppercase letter".
+        -- LTeX is an English-only spelling/grammar checker (LanguageTool based).
+        -- It has almost no Chinese support, so it floods Chinese markdown/tex
+        -- docs with false positives like "Possible spelling mistake found".
+        -- Disable it everywhere by default; re-enable per-file via magic
+        -- comment `% ltex: enabled=true` (or in a markdown: <!-- ltex: enabled=true -->)
+        -- if you ever need English spell-checking.
         ltex = {
           settings = {
             ltex = {
-              enabled = { "markdown", "text", "gitcommit" }, -- keep for prose, drop tex/bib/latex
-              diagnosticSeverity = "information",
+              enabled = false,
             },
           },
         },
