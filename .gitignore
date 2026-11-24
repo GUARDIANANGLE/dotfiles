@@ -114,3 +114,6 @@ config/.config/raycast/node-compile-cache/
 
 ### Stale untracked copy left over from the neovim -> neoed rename (real config is in neovim/) ###
 neoed/
+
+### WorkBuddy local workspace data (not part of dotfiles) ###
+.workbuddy/
