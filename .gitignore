@@ -117,3 +117,65 @@ neoed/
 
 ### WorkBuddy local workspace data (not part of dotfiles) ###
 .workbuddy/
+
+### Fisher plugin sources (installed at runtime via `fisher update`, listed in fish_plugins) ###
+fish/.config/fish/functions/fisher.fish
+fish/.config/fish/completions/fisher.fish
+fish/.config/fish/functions/fish_prompt.fish
+# tide (prompt)
+fish/.config/fish/functions/_tide*.fish
+fish/.config/fish/functions/tide.fish
+fish/.config/fish/functions/tide/
+fish/.config/fish/conf.d/_tide_init.fish
+fish/.config/fish/completions/tide.fish
+# gitnow
+fish/.config/fish/functions/__gitnow*.fish
+fish/.config/fish/functions/gitnow*.fish
+fish/.config/fish/conf.d/.gitnow
+fish/.config/fish/conf.d/gitnow.fish
+# fzf.fish
+fish/.config/fish/functions/_fzf*.fish
+fish/.config/fish/functions/fzf_configure_bindings.fish
+fish/.config/fish/conf.d/fzf.fish
+fish/.config/fish/completions/fzf_configure_bindings.fish
+# pisces
+fish/.config/fish/functions/_pisces*.fish
+fish/.config/fish/conf.d/pisces.fish
+# sponge
+fish/.config/fish/functions/_sponge*.fish
+fish/.config/fish/functions/sponge*.fish
+fish/.config/fish/conf.d/sponge.fish
+# autopair
+fish/.config/fish/functions/_autopair*.fish
+fish/.config/fish/conf.d/autopair.fish
+# done
+fish/.config/fish/conf.d/done.fish
+# plugin-bang-bang
+fish/.config/fish/conf.d/plugin-bang-bang.fish
+# replay
+fish/.config/fish/functions/replay.fish
+fish/.config/fish/completions/replay.fish
+# fisher-plugin-macos (edheltzel)
+fish/.config/fish/functions/cdf.fish
+fish/.config/fish/functions/flushdns.fish
+fish/.config/fish/functions/freespace.fish
+fish/.config/fish/functions/manp.fish
+fish/.config/fish/functions/music.fish
+fish/.config/fish/functions/ofd.fish
+fish/.config/fish/functions/pfd.fish
+fish/.config/fish/functions/pfs.fish
+fish/.config/fish/functions/pushdf.fish
+fish/.config/fish/functions/ql.fish
+fish/.config/fish/functions/rmds.fish
+fish/.config/fish/functions/showhidden.fish
+fish/.config/fish/functions/trash.fish
+fish/.config/fish/functions/unset.fish
+fish/.config/fish/functions/updatedb.fish
+# oh-my-fish/plugin-bang-bang completions (branch/merge/move/tag)
+fish/.config/fish/completions/branch.fish
+fish/.config/fish/completions/merge.fish
+fish/.config/fish/completions/move.fish
+fish/.config/fish/completions/tag.fish
+# plugin-bang-bang helpers
+fish/.config/fish/functions/__history_previous_command.fish
+fish/.config/fish/functions/__history_previous_command_arguments.fish
