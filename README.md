@@ -103,7 +103,7 @@ capture-empryo  将 ~/.empryo/config.json 复制回仓库
 
 ### Git hooks
 
-`just hooks` 会在 `.git/hooks` 安装包装脚本，调用 `.githooks/pre-commit`（禁止直接提交到 `master`、对 shell 运行 `shellcheck`）和 `.githooks/commit-msg`（Conventional Commits）。
+`just hooks` 会在 `.git/hooks` 安装包装脚本，调用 `.githooks/commit-msg`（Conventional Commits）。已无 pre-commit hook：可直接从 git、LazyGit 或 grit 提交到 `master`。
 
 ## Stow 包
 

@@ -56,9 +56,6 @@ fish_add_path "$HOME/.local/bin"
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
 
-# Added by GitButler installer
-but completions fish | source
-
 
 # Added by Antigravity CLI installer
 set -gx PATH "$HOME/.local/bin" $PATH

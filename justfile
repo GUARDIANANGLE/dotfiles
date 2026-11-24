@@ -102,7 +102,8 @@ hooks:
     root="$(git rev-parse --show-toplevel)"
     git config --unset-all core.hooksPath || true
     mkdir -p "$root/.git/hooks"
-    for hook in pre-commit commit-msg; do
+    rm -f "$root/.git/hooks/pre-commit"
+    for hook in commit-msg; do
       printf '#!/bin/sh\nexec "%s/.githooks/%s" "$@"\n' "$root" "$hook" > "$root/.git/hooks/$hook"
       chmod +x "$root/.git/hooks/$hook"
     done
@@ -116,7 +117,7 @@ capture-empryo:
 
 # Build the aup updater (tools/aup) into ~/.local/bin/aup
 aup:
-    @cd tools/aup && go build -o ~/.local/bin/aup .
+    @cd tools/aup && go build -ldflags "-X main.version=$(git describe --tags --always --dirty)" -o ~/.local/bin/aup ./cmd/aup
     @printf "{{green}}aup built{{clr}} -> ~/.local/bin/aup\n"
 
 # Aliases

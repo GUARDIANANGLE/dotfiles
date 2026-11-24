@@ -45,6 +45,9 @@ if status is-interactive
     abbr --add gk 'grok --always-approve'
     abbr --add jc jcode
     abbr --add emo empryo
+    abbr --add emm 'rex do empryo'
+    abbr --add ro roborev
+    abbr --add rot 'roborev tui'
 
     # Terminals/Text Editors
     abbr --add zz zed
@@ -99,18 +102,6 @@ if status is-interactive
     abbr --add th treehouse
     abbr --add lw lazyworktree
     abbr --add lg lazygit
-
-    # But - gitbutler
-    abbr --add btt 'but tui'
-    abbr --add bgg 'but gui'
-    abbr --add bts 'but setup'
-    abbr --add btd 'but diff'
-    abbr --add bcm --set-cursor 'but c -m "%"'
-    abbr --add bpr 'but pr'
-    abbr --add bph 'but push'
-    abbr --add bpl 'but pull'
-    abbr --add bsq --set-cursor 'but squash "%"'
-    abbr --add bmv --set-cursor 'but move "%"'
 
     # Tuxedo
     abbr --add tux tuxedo

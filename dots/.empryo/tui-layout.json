@@ -1,13 +1,42 @@
 {
   "projectsCols": null,
   "panelCols": null,
-  "widePanelCols": null,
+  "widePanelCols": 130,
   "splitShares": {},
   "sessionFolds": {
     "mvjnx211-eqouli": {
       "tabs": {},
       "projects": {},
       "groups": {}
+    },
+    "94a39aee-2b3a-4638-a03e-50d6297e673f": {
+      "tabs": {
+        "cf92638d-001c-4620-8893-99d6975f7359": true
+      },
+      "projects": {},
+      "groups": {}
+    },
+    "4229125f-ffa8-4be6-8ffe-10797daced9e": {
+      "tabs": {},
+      "projects": {},
+      "groups": {}
+    },
+    "7f0ff5bb-98d1-44d4-9c4a-bd0551001131": {
+      "tabs": {},
+      "projects": {},
+      "groups": {}
+    },
+    "c047d7a5-d465-400d-a45f-4fd2d07a4133": {
+      "tabs": {},
+      "projects": {},
+      "groups": {}
+    },
+    "f5bbfce6-b978-4efc-8cb5-d01a83a896e3": {
+      "tabs": {},
+      "projects": {},
+      "groups": {
+        "": true
+      }
     }
   }
 }
