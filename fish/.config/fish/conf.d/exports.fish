@@ -23,6 +23,9 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx LC_ALL en_US.UTF-8
 
+# fish 界面消息用中文（仅影响 fish 本身，不改变 LC_ALL 对其他工具的作用）
+status language set zh_CN
+
 # Nvim shell integration (terminal-aware)
 string match -q "$TERM_PROGRAM" nvim
 and . (nvim --locate-shell-integration-path fish)

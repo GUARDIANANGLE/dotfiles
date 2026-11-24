@@ -1,33 +1,33 @@
 prSections:
-  - title: My PRs
+  - title: 我的 PR
     filters: is:open
-  - title: Needs My Review
+  - title: 待我评审
     filters: is:open review-requested:@me
-  - title: Involved
+  - title: 我参与的
     filters: is:open involves:@me -author:@me
 issuesSections:
-  - title: My Issues
+  - title: 我的 Issue
     filters: is:open author:@me
-  - title: Assigned
+  - title: 指派给我
     filters: is:open assignee:@me
-  - title: Involved
+  - title: 我参与的
     filters: is:open involves:@me -author:@me
 notificationsSections:
-  - title: All
+  - title: 全部
     filters: ""
-  - title: Created
+  - title: 我创建的
     filters: reason:author
-  - title: Participating
+  - title: 我参与的
     filters: reason:participating
-  - title: Mentioned
+  - title: 提及我的
     filters: reason:mention
-  - title: Review Requested
+  - title: 待我评审
     filters: reason:review-requested
-  - title: Assigned
+  - title: 指派给我
     filters: reason:assign
-  - title: Subscribed
+  - title: 我订阅的
     filters: reason:subscribed
-  - title: Team Mentioned
+  - title: 提及我的团队
     filters: reason:team-mention
 repo:
   branchesRefetchIntervalSeconds: 30
@@ -96,19 +96,19 @@ keybindings:
 theme:
   colors:
     text:
-      primary: "#ebdbb2"
-      secondary: "#fabd2f"
-      inverted: "#282828"
-      faint: "#928374"
-      warning: "#d79921"
-      success: "#b8bb26"
-      error: "#fb4934"
+      primary: "#1e2029"
+      secondary: "#754ef6"
+      inverted: "#f0f3f4"
+      faint: "#5b73dc"
+      warning: "#a75c00"
+      success: "#007f42"
+      error: "#df0514"
     background:
-      selected: "#3c3836"
+      selected: "#e2e6e8"
     border:
-      primary: "#fabd2f"
-      secondary: "#928374"
-      faint: "#32302f"
+      primary: "#8a69f7"
+      secondary: "#5b73dc"
+      faint: "#e2e6e8"
   ui:
     sectionsShowCount: true
     table:

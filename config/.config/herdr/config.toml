@@ -70,7 +70,7 @@ delivery = "herdr"
 position = "top-right"
 
 [theme]
-name = "gruvbox"
+name = "terminal"
 auto_switch = false
 
 ### keybindings ###
@@ -115,7 +115,7 @@ swap_pane_right = ""
 # custom
 [[keys.command]]
 key = "prefix+shift+g"
-description = "launch Lazygit"
+description = "启动 Lazygit"
 command = "lazygit"
 type = "popup"
 width = "90%"
@@ -123,7 +123,7 @@ height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+d"
-description = "launch Dash"
+description = "启动 Dash"
 command = "gh dash"
 type = "popup"
 width = "90%"
@@ -131,7 +131,7 @@ height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+t"
-description = "launch Tuxedo"
+description = "启动 Tuxedo"
 command = "tuxedo"
 type = "popup"
 width = "90%"
@@ -139,7 +139,7 @@ height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+f"
-description = "launch Yazi"
+description = "启动 Yazi"
 command = "yazi"
 type = "popup"
 width = "90%"
@@ -147,13 +147,13 @@ height = "90%"
 
 [[keys.command]]
 key = "prefix+shift+v"
-description = "launch Neovim"
+description = "启动 Neovim"
 command = "nvim"
 type = "pane"
 
 [[keys.command]]
 key = "prefix+shift+s"
-description = "launch scratch Terminal"
+description = "启动临时终端"
 command = "exec \"${SHELL:-sh}\""
 type = "popup"
 width = "90%"
@@ -165,47 +165,47 @@ height = "90%"
 key = "super+p"                   # ⌘+P on macOS
 type = "plugin_action"
 command = "vjeantet.palette.open"
-description = "Command palette"
+description = "命令面板"
 
 # Plannotator
 [[keys.command]] # Terminal annotations
 key = "prefix+a"
 type = "plugin_action"
 command = "annotate.capture"
-description = "annotate text"
+description = "标注文本"
 
 [[keys.command]]
 key = "prefix+shift+a"
 type = "plugin_action"
 command = "annotate.copy-context"
-description = "copy annotations as context"
+description = "复制标注作为上下文"
 
 [[keys.command]]
 key = "prefix+ctrl+a"
 type = "plugin_action"
 command = "annotate.copy-archive"
-description = "copy annotations as context and archive them"
+description = "复制标注作为上下文并归档"
 
 [[keys.command]]
 key = "prefix+m"
 type = "plugin_action"
 command = "annotate.manage"
-description = "manage annotations"
+description = "管理标注"
 
 [[keys.command]] # Document review (plannotator-tui)
 key = "prefix+o"
 type = "plugin_action"
 command = "annotate.open"
-description = "review documents in this folder"
+description = "审阅本文件夹中的文档"
 
 [[keys.command]]
 key = "prefix+shift+o"
 type = "plugin_action"
 command = "annotate.last"
-description = "review the agent's last reply"
+description = "审阅 Agent 的上一条回复"
 
 [[keys.command]]
 key = "prefix+y"
 type = "plugin_action"
 command = "herdr-projects.open-popup"
-description = "Projects"
+description = "项目"

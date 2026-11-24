@@ -5,6 +5,7 @@
 git:
   overrideGpg: true
 gui:
+  language: zh-CN
   theme:
     activeBorderColor:
       - "#fabd2f"

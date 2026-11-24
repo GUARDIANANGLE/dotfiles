@@ -23,7 +23,7 @@
 		"break",
 		{
 			"type": "os",
-			"key": "OS   ",
+			"key": "系统 ",
 			"keyColor": "35" // = color1
 		},
 		{
@@ -45,7 +45,7 @@
 		"break",
 		{
 			"type": "wm",
-			"key": "WM   ",
+			"key": "窗口管理器 ",
 			"keyColor": "34"
 		},
 		{
@@ -77,7 +77,7 @@
 		{
 			"type": "host",
 			"format": "{5} {1} Type {2}",
-			"key": "PC   ",
+			"key": "主机 ",
 			"keyColor": "36"
 		},
 		{
