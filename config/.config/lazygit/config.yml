@@ -8,28 +8,28 @@ gui:
   language: zh-CN
   theme:
     activeBorderColor:
-      - "#fabd2f"
+      - "#38ff9f"
       - bold
     inactiveBorderColor:
-      - "#928374"
+      - "#c9cbcd"
     searchingActiveBorderColor:
-      - "#fabd2f"
+      - "#fb5bb6"
       - bold
     optionsTextColor:
-      - "#83a598"
+      - blue
     selectedLineBgColor:
-      - "#504945"
+      - "#e2e6e8"
     inactiveViewSelectedLineBgColor:
       - bold
     cherryPickedCommitFgColor:
-      - "#d3869b"
+      - "#f0f3f4"
     cherryPickedCommitBgColor:
-      - "#458588"
+      - cyan
     markedBaseCommitFgColor:
-      - "#458588"
+      - blue
     markedBaseCommitBgColor:
-      - "#fabd2f"
+      - "#fff952"
     unstagedChangesColor:
-      - "#fb4934"
+      - "#df0514"
     defaultFgColor:
-      - "#ebdbb2"
+      - "#1e2029"
