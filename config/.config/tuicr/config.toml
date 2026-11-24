@@ -34,21 +34,21 @@ diff_watch_interval_ms = 0
 backend = "libgit2"
 
 comment_types = [
-  { id = "note", label = "question", definition = "ask for clarification", color = "yellow" },
-  { id = "suggestion", definition = "possible improvements" },
-  { id = "issue", definition = "problems to fix" },
-  { id = "praise", definition = "positive feedback" },
-  { id = "nit", label = "nitpick", definition = "small optional tweaks", color = "#d19a66" },
+  { id = "note", label = "提问", definition = "请求澄清", color = "yellow" },
+  { id = "suggestion", definition = "可改进之处" },
+  { id = "issue", definition = "需要修复的问题" },
+  { id = "praise", definition = "正面反馈" },
+  { id = "nit", label = "小建议", definition = "可选的小调整", color = "#d19a66" },
 ]
 
 [forge]
 comment_type_prefix = true
 
 [export]
-intro = "I reviewed your code and have the following comments. Please address them."
+intro = "我审阅了你的代码，以下是评论意见，请处理。"
 scope_line = true
 pr_metadata = true
-comments_header = "## Local tuicr Comments"
-remote_comments_header = "## Existing GitHub Comments"
+comments_header = "## 本地 tuicr 评论"
+remote_comments_header = "## 已有 GitHub 评论"
 legend = true
 session_header = true

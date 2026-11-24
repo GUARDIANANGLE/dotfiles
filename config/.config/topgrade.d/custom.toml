@@ -16,11 +16,11 @@ repos = [
 # Custom commands
 [commands]
 "grit" = "grit update"
-"Update Agent Harnesses" = "fish --interactive --command aup"
-"LazyVim Plugins" = "nvim --headless -c 'Lazy! sync' +qa &>/dev/null; and echo 'LazyVim Plugins Update Complete'"
-"Treesitter Parsers" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa' &>/dev/null; and echo 'Treesitter Update Complete'"
-"Fisher Plugins" = "fisher update &>/dev/null; and echo 'Fisher Update Complete'"
+"更新 Agent Harnesses" = "fish --interactive --command aup"
+"LazyVim 插件" = "nvim --headless -c 'Lazy! sync' +qa &>/dev/null; and echo 'LazyVim 插件更新完成'"
+"Treesitter 解析器" = "nvim --headless -c 'sleep 100m' -c 'TSUpdate' -c 'qa' &>/dev/null; and echo 'Treesitter 更新完成'"
+"Fisher 插件" = "fisher update &>/dev/null; and echo 'Fisher 更新完成'"
 
 # Custom Post-commands
 [post_commands]
-"Brew - Cleanup" = "brew cleanup --prune=all &>/dev/null; and echo 'Brew Cleanup Complete'"
+"Brew - 清理" = "brew cleanup --prune=all &>/dev/null; and echo 'Brew 清理完成'"
